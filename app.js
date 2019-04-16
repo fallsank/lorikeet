@@ -56,7 +56,17 @@ function displayFiles(err, files) {
   }
   files.forEach(file => {
     console.log(file);
+    displayFile(file);
   });
+}
+
+function displayFile(file) {
+  const mainArea = document.getElementById("main-area");
+  const template = document.querySelector("#item-template");
+  let clone = document.importNode(template.content, true);
+  clone.querySelector("img").src = "";
+  clone.querySelector(".filename").innerText = file.file;
+  mainArea.append(clone);
 }
 
 function main() {
