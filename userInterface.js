@@ -89,6 +89,14 @@ function displayFile(file) {
       },
       false
     );
+  } else if (file.type === "file") {
+    clone.querySelector("img").addEventListener(
+      "dblclick",
+      () => {
+        fileSystem.openFile(file);
+      },
+      false
+    );
   }
   mainArea.append(clone);
 }

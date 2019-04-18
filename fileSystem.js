@@ -3,6 +3,8 @@ const osenv = require("osenv");
 const path = require("path");
 const async = require("async");
 
+let shell = require("electron").shell;
+
 /**
  * 获取根目录
  */
@@ -50,8 +52,13 @@ function inspectAndDescribeFiles(folderPath, files, cb) {
   );
 }
 
+function openFile(file) {
+  shell.openItem(file.path);
+}
+
 module.exports = {
   getUsersHomeFolder,
   getFilesInFolder,
-  inspectAndDescribeFiles
+  inspectAndDescribeFiles,
+  openFile
 };
