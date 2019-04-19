@@ -1,10 +1,19 @@
 {
-    "name": "electron-demo01",
-    "version": "1.0.0",
-    "main": "main.js",
-    "dependencies": {
-        "async": "^2.6.2",
-        "lunr": "^0.7.2",
-        "osenv": "^0.1.5"
-    }
+  "name": "lorikeet",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Xudong Meng",
+  "description": "lorikeet",
+  "dependencies": {
+    "async": "^2.6.2",
+    "lunr": "^0.7.2",
+    "osenv": "^0.1.5"
+  },
+  "scripts": {
+    "pack": "build"
+  },
+  "devDependencies": {
+    "electron": "^4.1.4",
+    "electron-builder": "^20.39.0"
+  }
 }
